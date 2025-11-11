@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tcmp-demo
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=${PORT:-8080}
+      # IMPORTANT: Set ADMIN_PASSWORD via .env file or environment variable
+      # Never commit .env file to git!
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - FIRESTORE_CREDENTIALS_PATH=${FIRESTORE_CREDENTIALS_PATH:-/app/credentials/india-tech-meetup-2025-4152acea5580.json}
+    volumes:
+      # Mount credentials as read-only volume (credentials are NOT in Docker image)
+      # Credentials should be stored securely and mounted at runtime
+      - ./backend/credentials:/app/credentials:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget --quiet --tries=1 --spider http://localhost:8080/api/sessions || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+

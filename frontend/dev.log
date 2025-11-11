@@ -1,0 +1,59 @@
+
+> event-registration-frontend@0.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 122 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+3:36:20 PM [vite] hmr update /src/components/SessionsSpeakers.tsx
+3:36:21 PM [vite] hmr update /src/components/Registration.tsx
+3:36:26 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:36:27 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:36:31 PM [vite] hmr update /src/components/AdminDashboard.tsx
+3:36:32 PM [vite] hmr update /src/components/AdminLogin.tsx
+3:36:33 PM [vite] hmr update /src/components/Location.tsx
+3:36:34 PM [vite] hmr update /src/components/ConfirmationPopup.tsx
+3:36:50 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:36:57 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:37:18 PM [vite] hmr update /src/components/AdminDashboard.tsx
+3:37:18 PM [vite] hmr update /src/components/ConfirmationPopup.tsx
+3:37:18 PM [vite] page reload src/main.tsx
+3:37:18 PM [vite] hmr update /src/components/Registration.tsx
+3:37:18 PM [vite] hmr update /src/App.tsx
+3:37:18 PM [vite] hmr update /src/components/Location.tsx
+3:37:18 PM [vite] hmr update /src/components/SessionsSpeakers.tsx
+3:37:18 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:37:18 PM [vite] hmr update /src/components/AdminLogin.tsx
+3:41:44 PM [vite] hmr update /src/App.tsx
+3:41:44 PM [vite] hmr update /src/components/Location.tsx
+3:41:44 PM [vite] hmr update /src/components/AdminLogin.tsx
+3:41:44 PM [vite] page reload src/main.tsx
+3:41:44 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:41:44 PM [vite] hmr update /src/components/ConfirmationPopup.tsx
+3:41:44 PM [vite] hmr update /src/components/AdminDashboard.tsx
+3:41:44 PM [vite] hmr update /src/components/SessionsSpeakers.tsx
+3:41:44 PM [vite] hmr update /src/components/Registration.tsx
+3:42:06 PM [vite] hmr update /src/components/ConfirmationPopup.tsx
+3:42:06 PM [vite] changed tsconfig file detected: /Users/shashwat.rawat/Repos/tcmp-demo/frontend/tsconfig.node.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+3:42:06 PM [vite] hmr update /src/components/SessionsSpeakers.tsx
+3:42:06 PM [vite] hmr update /src/components/ConfirmationPopup.css
+3:42:06 PM [vite] hmr update /src/components/Location.tsx
+3:42:06 PM [vite] hmr update /src/components/Registration.css
+3:42:06 PM [vite] changed tsconfig file detected: /Users/shashwat.rawat/Repos/tcmp-demo/frontend/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+3:42:06 PM [vite] hmr update /src/components/AdminDashboard.tsx
+3:42:06 PM [vite] page reload src/main.tsx
+3:42:06 PM [vite] hmr update /src/styles/index.css
+3:42:06 PM [vite] hmr update /src/components/Registration.tsx
+3:42:06 PM [vite] hmr update /src/components/Location.css
+3:42:06 PM [vite] page reload index.html
+3:42:06 PM [vite] hmr update /src/App.tsx
+3:42:06 PM [vite] vite.config.ts changed, restarting server...
+3:42:06 PM [vite] hmr update /src/components/AdminLogin.css
+3:42:06 PM [vite] hmr update /src/components/SessionsSpeakers.css
+3:42:06 PM [vite] hmr update /src/components/Registration.tsx, /src/components/SessionsSpeakers.tsx, /src/components/AdminLogin.tsx, /src/components/AdminDashboard.tsx
+3:42:06 PM [vite] hmr update /src/components/AdminLogin.tsx
+3:42:06 PM [vite] hmr update /src/components/AdminDashboard.css
+3:42:06 PM [vite] hmr update /src/styles/App.css
+3:42:06 PM [vite] server restarted.

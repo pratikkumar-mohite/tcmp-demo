@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/.vite
+frontend/dev.log
+frontend/*.log
+
+# Backend
+backend/server
+backend/*.log
+backend/server.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Credentials and sensitive data - NEVER include in Docker image
+backend/credentials/*.json
+backend/credentials/*.key
+backend/credentials/*.pem
+**/credentials/**
+**/*credentials*.json
+
+# Test files
+**/*_test.go
+**/testdata
+

@@ -1,0 +1,6 @@
+/* Additional App-specific styles */
+.app {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+
