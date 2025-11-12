@@ -13,9 +13,11 @@ services:
       # IMPORTANT: Set ADMIN_PASSWORD via .env file or environment variable
       # Never commit .env file to git!
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
-      - FIRESTORE_CREDENTIALS_PATH=${FIRESTORE_CREDENTIALS_PATH:-/app/credentials/india-tech-meetup-2025-4152acea5580.json}
+      # OPTIONAL: If not set, will use Application Default Credentials (ADC)
+      # Set FIRESTORE_CREDENTIALS_PATH via .env file or environment variable if using service account JSON
+      - FIRESTORE_CREDENTIALS_PATH=${FIRESTORE_CREDENTIALS_PATH}
     volumes:
-      # Mount credentials as read-only volume (credentials are NOT in Docker image)
+      # Mount credentials as read-only volume (only needed if using FIRESTORE_CREDENTIALS_PATH)
       # Credentials should be stored securely and mounted at runtime
       - ./backend/credentials:/app/credentials:ro
     restart: unless-stopped

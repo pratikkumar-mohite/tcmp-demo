@@ -46,21 +46,28 @@ func TestLoadConfig(t *testing.T) {
 			name:          "Default values",
 			expectedPort:  "8080",
 			expectedPass:  "admin123",
-			expectedCreds: "credentials/india-tech-meetup-2025-4152acea5580.json",
+			expectedCreds: "", // Empty when not set, will use ADC
 		},
 		{
 			name:          "Custom port",
 			setPort:       "3000",
 			expectedPort:  "3000",
 			expectedPass:  "admin123",
-			expectedCreds: "credentials/india-tech-meetup-2025-4152acea5580.json",
+			expectedCreds: "", // Empty when not set, will use ADC
 		},
 		{
 			name:          "Custom password",
 			setPassword:   "custompass",
 			expectedPort:  "8080",
 			expectedPass:  "custompass",
-			expectedCreds: "credentials/india-tech-meetup-2025-4152acea5580.json",
+			expectedCreds: "", // Empty when not set, will use ADC
+		},
+		{
+			name:          "Custom credentials path",
+			setCreds:      "/path/to/credentials.json",
+			expectedPort:  "8080",
+			expectedPass:  "admin123",
+			expectedCreds: "/path/to/credentials.json",
 		},
 	}
 

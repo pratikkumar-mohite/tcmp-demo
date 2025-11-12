@@ -17,11 +17,17 @@ var (
 
 func InitializeFirestore(cfg *config.Config) error {
 	credentialsPath := cfg.FirestoreCredentialsPath
-	if _, err := os.Stat(credentialsPath); os.IsNotExist(err) {
-		log.Fatalf("Firestore credentials file not found: %s", credentialsPath)
+	
+	// Only set credentials path if provided, otherwise use Application Default Credentials (ADC)
+	if credentialsPath != "" {
+		if _, err := os.Stat(credentialsPath); os.IsNotExist(err) {
+			log.Fatalf("Firestore credentials file not found: %s", credentialsPath)
+		}
+		os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath)
+		log.Printf("Using Firestore credentials from: %s", credentialsPath)
+	} else {
+		log.Println("Using Application Default Credentials (ADC) for Firestore")
 	}
-
-	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath)
 
 	app, err := firebase.NewApp(ctx, nil)
 	if err != nil {

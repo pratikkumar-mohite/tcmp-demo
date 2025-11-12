@@ -5,10 +5,10 @@ import (
 )
 
 type Config struct {
-	Port                  string
-	AdminPassword         string
+	Port                     string
+	AdminPassword            string
 	FirestoreCredentialsPath string
-	ClientID              string
+	ClientID                 string
 }
 
 func LoadConfig() *Config {
@@ -23,18 +23,15 @@ func LoadConfig() *Config {
 	}
 
 	credentialsPath := os.Getenv("FIRESTORE_CREDENTIALS_PATH")
-	if credentialsPath == "" {
-		credentialsPath = "credentials/india-tech-meetup-2025-4152acea5580.json"
-	}
+	// If empty, will use Application Default Credentials (ADC)
 
 	// Client ID from service account JSON
 	clientID := "114617498403471847641"
 
 	return &Config{
-		Port:                  port,
-		AdminPassword:         adminPassword,
+		Port:                     port,
+		AdminPassword:            adminPassword,
 		FirestoreCredentialsPath: credentialsPath,
-		ClientID:              clientID,
+		ClientID:                 clientID,
 	}
 }
-
