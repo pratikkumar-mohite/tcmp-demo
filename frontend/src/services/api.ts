@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Attendee, SessionWithSpeaker, Speaker, RegisterRequest, Stats } from '../types';
+import type { Attendee, SessionWithSpeaker, Speaker, RegisterRequest, Stats, Todo } from '../types';
 
 const API_URL = import.meta.env.VITE_API_URL || '/api';
 
@@ -70,5 +70,24 @@ export const addUpdateSpeaker = async (speaker: Partial<Speaker> & { id?: string
 export const addUpdateSession = async (session: Partial<SessionWithSpeaker> & { id?: string }): Promise<SessionWithSpeaker> => {
   const response = await api.post<SessionWithSpeaker>('/admin/sessions', session);
   return response.data;
+};
+
+export const getTodos = async (): Promise<Todo[]> => {
+  const response = await api.get<Todo[]>('/todos');
+  return Array.isArray(response.data) ? response.data : [];
+};
+
+export const createTodo = async (todo: { title: string; description?: string }): Promise<Todo> => {
+  const response = await api.post<Todo>('/todos', todo);
+  return response.data;
+};
+
+export const updateTodo = async (id: string, updates: Partial<Todo>): Promise<Todo> => {
+  const response = await api.put<Todo>(`/todos/${id}`, updates);
+  return response.data;
+};
+
+export const deleteTodo = async (id: string): Promise<void> => {
+  await api.delete(`/todos/${id}`);
 };
 

@@ -34,6 +34,12 @@ func main() {
 	r.HandleFunc("/api/speakers", handlers.GetSpeakers).Methods("GET", "OPTIONS")
 	r.HandleFunc("/api/register", handlers.RegisterAttendee).Methods("POST", "OPTIONS")
 	r.HandleFunc("/api/attendees/count", handlers.GetAttendeeCount).Methods("GET", "OPTIONS")
+	
+	// Todo routes
+	r.HandleFunc("/api/todos", handlers.GetTodos).Methods("GET", "OPTIONS")
+	r.HandleFunc("/api/todos", handlers.CreateTodo).Methods("POST", "OPTIONS")
+	r.HandleFunc("/api/todos/{id}", handlers.UpdateTodo).Methods("PUT", "OPTIONS")
+	r.HandleFunc("/api/todos/{id}", handlers.DeleteTodo).Methods("DELETE", "OPTIONS")
 
 	// Admin routes
 	r.HandleFunc("/api/admin/login", handlers.AdminLogin).Methods("POST", "OPTIONS")
