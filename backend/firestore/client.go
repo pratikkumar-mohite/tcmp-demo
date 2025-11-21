@@ -56,3 +56,7 @@ func GetSessionsCollection() *firestore.CollectionRef {
 	return Client.Collection("clients").Doc(ClientID).Collection("sessions")
 }
 
+func GetTodosCollection() *firestore.CollectionRef {
+	return Client.Collection("clients").Doc(ClientID).Collection("todos")
+}
+
